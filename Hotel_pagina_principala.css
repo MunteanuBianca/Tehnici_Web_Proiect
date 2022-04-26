@@ -1,0 +1,114 @@
+body {
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: cursive;
+    margin: 0px;
+    width: 100%;
+    /* height: 500vh; */
+    background-image: url("Marble/marble.jpg");
+    background-attachment: fixed;
+    background-size: 25vw 25vh;
+}
+
+header {
+    background-image: url("Hotel_Rooms/hotel_room.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    height: 100vh;
+}
+
+#logo {
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+    width: 10%;
+    margin-left: 45%;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: 'Brush Script MT', cursive;
+    font-size: 10vw;
+    text-align: center;
+    margin-top: 0px;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    padding: 8px 0px 8px 0px;
+    display: block;
+    text-align: center;
+    background-color: rgb(22, 2, 54);
+    color: white;
+}
+
+.meniu {
+    margin: 0px;
+}
+
+.meniu > li {
+    display: inline-block;
+    vertical-align: text-top;
+    padding-right: 75px;
+    font-size: 2vw;
+}
+
+main {
+    color: rgb(22, 2, 54);
+    font-size: 20px;
+}
+
+main > #prezentare {
+    text-align: center;
+}
+
+main > .continut {
+    margin: 10vh 0px 10vh 8vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:80vw;
+    gap:2vw;
+    padding: 1vw 2vw 1vw 2vw;
+    align-items: center;
+    border-top:2px dashed rgb(22, 2, 54);
+}
+
+main > .continut > .descriere {
+ text-align: center;
+}
+
+.img {
+    width: 39vw;
+    height: 50vh;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(22, 2, 54);
+    color: white;
+    margin-bottom: 0px;
+    padding: 8px 0px 8px 0px;
+    font-size: 20px;
+}
+
+footer > div :first-child {
+    color:rgb(210, 166, 252);
+}
+
+#adresa {
+    flex: 1;
+}
+
+#telefon {
+    flex: 1;
+}
+
+#email {
+    flex: 1;
+}
+
+#facebook {
+    flex: 1;
+}
