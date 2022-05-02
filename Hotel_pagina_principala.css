@@ -3,14 +3,13 @@ body {
     font-family: cursive;
     margin: 0px;
     width: 100%;
-    /* height: 500vh; */
-    background-image: url("Marble/marble.jpg");
+    background-image: url("Pagina_principala/Marble/marble.jpg");
     background-attachment: fixed;
     background-size: 25vw 25vh;
 }
 
 header {
-    background-image: url("Hotel_Rooms/hotel_room.jpg");
+    background-image: url("Pagina_principala/Hotel_Rooms/hotel_room.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
@@ -39,18 +38,22 @@ nav {
     display: block;
     text-align: center;
     background-color: rgb(22, 2, 54);
-    color: white;
 }
 
-.meniu {
+.navigare {
     margin: 0px;
 }
 
-.meniu > li {
+.navigare > li {
     display: inline-block;
     vertical-align: text-top;
     padding-right: 75px;
     font-size: 2vw;
+}
+
+.navigare > li > a {
+    text-decoration: none;
+    color: white;
 }
 
 main {
@@ -97,18 +100,6 @@ footer > div :first-child {
     color:rgb(210, 166, 252);
 }
 
-#adresa {
-    flex: 1;
-}
-
-#telefon {
-    flex: 1;
-}
-
-#email {
-    flex: 1;
-}
-
-#facebook {
-    flex: 1;
+footer > div {
+    flex:1;
 }
