@@ -52,6 +52,10 @@ nav {
     font-size: 2vw;
 }
 
+.navigare >li:hover {
+    font-size: 2.2vw;
+}
+
 .navigare > li > a {
     text-decoration: none;
     color: white;
@@ -143,6 +147,9 @@ main {
     display: inline-block;
 }
 
+.meniuri_principale > p:hover {
+    font-size: 1.7em;
+}
 
 .desfasurate {
     display: none;
@@ -151,12 +158,27 @@ main {
 
 .desfasurate > h2 {
     text-align: center;
-    border-top: 2px dashed rgb(22, 2, 54);
     padding: 1vw;
+    background-image: linear-gradient(90deg, white 0%, rgb(22, 2, 54) 30%, rgb(22, 2, 54) 70%, white 100%) ;
+    color: white;
 }
 
 .show{
     display:block;
+}
+
+.desfasurate > section > h3 {
+    border-top: 2px dashed rgb(22, 2, 54);
+}
+
+.coloane {
+    display: flex;
+    justify-content: space-between;
+}
+
+.program {
+    text-align: center;
+    margin: 5vh 0vw;
 }
 
 footer {
