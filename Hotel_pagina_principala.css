@@ -1,6 +1,6 @@
 body {
-    /* font-family: 'Times New Roman', Times, serif; */
-    font-family: cursive;
+    font-family: 'Times New Roman', Times, serif;
+    /*font-family: cursive;*/
     margin: 0px;
     width: 100%;
     background-image: url("Pagina_principala/Marble/marble.jpg");
@@ -38,6 +38,7 @@ nav {
     display: block;
     text-align: center;
     background-color: rgb(22, 2, 54);
+    z-index: 1;
 }
 
 .navigare {
@@ -49,10 +50,11 @@ nav {
     vertical-align: text-top;
     padding-right: 75px;
     font-size: 2vw;
+    color: white;
 }
 
-.navigare >li:hover {
-    font-size: 2.2vw;
+.navigare > li > a:hover {
+    color: rgb(210, 166, 252);
 }
 
 .navigare > li > a {
@@ -78,6 +80,18 @@ main > .continut {
     padding: 1vw 2vw 1vw 2vw;
     align-items: center;
     border-top:2px dashed rgb(22, 2, 54);
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 main > .continut > .descriere {

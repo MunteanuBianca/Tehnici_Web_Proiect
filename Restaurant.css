@@ -1,6 +1,6 @@
 body {
-    /* font-family: 'Times New Roman', Times, serif; */
-    font-family: cursive;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-family: cursive; */
     margin: 0px;
     width: 100%;
     background-image: url("Pagina_principala/Marble/marble.jpg");
@@ -50,10 +50,11 @@ nav {
     vertical-align: text-top;
     padding-right: 75px;
     font-size: 2vw;
+    color: white;
 }
 
-.navigare >li:hover {
-    font-size: 2.2vw;
+.navigare > li > a:hover {
+    color: rgb(210, 166, 252);
 }
 
 .navigare > li > a {
@@ -127,6 +128,28 @@ main {
 
 .meniuri_principale > h2{
     text-align: center;
+}
+
+.meniuri_principale > h2::before {
+    background-image: url("Restaurant/divider_left.svg");
+    background-size: 2em 1em;
+    content: "";
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+}
+
+.meniuri_principale > h2::after {
+    background-image: url("Restaurant/divider_right.svg");
+    background-size: 2em 1em;
+    content: "";
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+}
+
+.meniuri_principale > h2:hover {
+    cursor: pointer;
 }
 
 .meniuri_principale {
