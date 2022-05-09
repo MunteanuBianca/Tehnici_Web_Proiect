@@ -98,6 +98,24 @@ main > .continut > .descriere {
  text-align: center;
 }
 
+.descriere > h2::before {
+    background-image: url("Restaurant/divider3_left.svg");
+    background-size: 2em 0.8em;
+    content: "";
+    display: inline-block;
+    width: 2em;
+    height: 0.8em;
+}
+
+.descriere > h2::after {
+    background-image: url("Restaurant/divider3_right.svg");
+    background-size: 2em 0.8em;
+    content: "";
+    display: inline-block;
+    width: 2em;
+    height: 0.8em;
+}
+
 .img {
     width: 39vw;
     height: 50vh;

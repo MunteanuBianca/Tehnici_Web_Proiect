@@ -131,21 +131,21 @@ main {
 }
 
 .meniuri_principale > h2::before {
-    background-image: url("Restaurant/divider_left.svg");
-    background-size: 2em 1em;
+    background-image: url("Restaurant/divider3_left.svg");
+    background-size: 2em 0.8em;
     content: "";
     display: inline-block;
     width: 2em;
-    height: 1em;
+    height: 0.8em;
 }
 
 .meniuri_principale > h2::after {
-    background-image: url("Restaurant/divider_right.svg");
-    background-size: 2em 1em;
+    background-image: url("Restaurant/divider3_right.svg");
+    background-size: 2em 0.8em;
     content: "";
     display: inline-block;
     width: 2em;
-    height: 1em;
+    height: 0.8em;
 }
 
 .meniuri_principale > h2:hover {
@@ -192,6 +192,24 @@ main {
 
 .desfasurate > section > h3 {
     border-top: 2px dashed rgb(22, 2, 54);
+}
+
+.desfasurate > section > h3::before {
+    background-image: url("Restaurant/divider3_left.svg");
+    background-size: 2em 0.8em;
+    content: "";
+    display: inline-block;
+    width: 2em;
+    height: 0.8em;
+}
+
+.desfasurate > section > h3::after {
+    background-image: url("Restaurant/divider3_right.svg");
+    background-size: 2em 0.8em;
+    content: "";
+    display: inline-block;
+    width: 2em;
+    height: 0.8em;
 }
 
 .coloane {
