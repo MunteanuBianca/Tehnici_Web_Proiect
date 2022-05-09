@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-image: url("Restaurant/restaurant8.jpg");
+    background-image: url("Rezervari/6.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
@@ -61,14 +61,72 @@ nav {
     text-decoration: none;
     color: white;
 }
+
+main {
+    color: rgb(22, 2, 54);
+    font-size: 20px;
+}
  
 #prezentare {
     margin: 5vw 0 5vw 0;
     text-align: center;
 }
 
+#continut {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    margin:20px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    background-color: rgb(22, 2, 54);
+}
+
+.container > h2, p {
+    transition: 0.5s ease;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
+    background-color: rgb(210, 166, 252);
+    border-radius: 5px;
+    color: white;
+    padding: 4% 8%;
+}
+
+.container > p {
+    opacity: 0;
+    background-color: transparent;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.container:hover > .img {
+    opacity: 0.5;
+}
+
+.container:hover > h2 {
+    top: 25%;
+    background-color: transparent;
+}
+
+.container:hover > p {
+    opacity: 1;
+}
+
 .img {
-    width: 39vw;
+    width: 100%;
+    opacity: 1;
+    display: block;
+    transition: 0.5s ease;
 }
 
 form {
