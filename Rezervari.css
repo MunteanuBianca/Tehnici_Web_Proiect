@@ -1,6 +1,6 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    /*font-family: cursive;*/
+    /* font-family: cursive; */
     margin: 0px;
     width: 100%;
     background-image: url("Pagina_principala/Marble/marble.jpg");
@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-image: url("Pagina_principala/Hotel_Rooms/hotel_room.jpg");
+    background-image: url("Restaurant/restaurant8.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
@@ -61,64 +61,85 @@ nav {
     text-decoration: none;
     color: white;
 }
-
-main {
-    color: rgb(22, 2, 54);
-    font-size: 20px;
-}
-
-main > #prezentare {
+ 
+#prezentare {
+    margin: 5vw 0 5vw 0;
     text-align: center;
-}
-
-main > .continut {
-    margin: 10vh 0px 10vh 8vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width:80vw;
-    gap:2vw;
-    padding: 1vw 2vw 1vw 2vw;
-    align-items: center;
-    border-top:2px dashed rgb(22, 2, 54);
-}
-
-.reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
-}
-  
-.reveal.active{
-    transform: translateY(0);
-    opacity: 1;
-}
-
-main > .continut > .descriere {
- text-align: center;
-}
-
-.descriere > h2::before {
-    background-image: url("Restaurant/divider3_left.svg");
-    background-size: 2em 0.8em;
-    content: "";
-    display: inline-block;
-    width: 2em;
-    height: 0.8em;
-}
-
-.descriere > h2::after {
-    background-image: url("Restaurant/divider3_right.svg");
-    background-size: 2em 0.8em;
-    content: "";
-    display: inline-block;
-    width: 2em;
-    height: 0.8em;
 }
 
 .img {
     width: 39vw;
-    /* height: 50vh; */
+}
+
+form {
+    background-color: rgb(210, 166, 252);
+    box-sizing: border-box;
+    border: 2px solid rgb(22, 2, 54);
+    border-radius: 5px;
+    padding: 2%;
+    margin: 2%;
+    font-size: 1.5vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+form :nth-child(9) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+input[type=text], input[type=date], input[type=number], select, textarea {
+    width: 100%;
+    padding: 24px 0px;
+    border: 1px solid rgb(22, 2, 54);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: rgb(22, 2, 54);
+}
+
+input[type=submit] {
+    background-color: rgb(22, 2, 54);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    }
+
+input[type=submit]:hover {
+    background-color: rgb(89, 19, 155);
+}
+
+.col-15 {
+    float: left;
+    width: 15%;
+    margin-top: 6px;
+}
+
+.col-85 {
+    float: left;
+    width: 85%;
+    margin-top: 6px;
+}
+
+/* .row:after {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+@media screen and (max-width: 600px) {
+    .col-215, .col-85, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
 }
 
 footer {

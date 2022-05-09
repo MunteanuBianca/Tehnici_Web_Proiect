@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervari</title>
+    <link href="Rezervari.css" rel="stylesheet">
+    <!-- <script src="Rezervari.js"></script> -->
+</head>
+<body>
+    <header>
+        <img src="Pagina_principala/White_Lily/white_lily.svg" id="logo"/>
+        <h1>Rezervari Hotel White Lily</h1>
+    </header>
+    <nav>
+        <ul class="navigare">
+            <li><a href="Hotel_pagina_principala.html">PAGINA PRINCIPALA</a></li>
+            <li><a href="Rezervari.html"> REZERVARI</a></li>
+            <li><a href="Restaurant.html">RESTAURANT</a></li>
+            <li>ISTORIC</li>
+        </ul>
+    </nav>
+    <main>
+        <h2 id="prezentare">Alege camera ta de vis pentru un sejur ca in basme!</h2>
+        <div id="container">
+            <img src="Rezervari/Apartament/2.jpg" class="img"/>
+            <img src="Rezervari/Apartament/1.jpg" class="img"/>
+            <img src="Rezervari/Apartament/3.jpg" class="img"/>
+        </div>
+        <form>
+            <div class="row">
+                <div class="col-15">
+                  <label for="fname">First Name</label>
+                </div>
+                <div class="col-85">
+                  <input type="text" id="fname" name="firstname" placeholder="First Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-15">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-85">
+                    <input type="text" id="lname" name="lastname" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-15">
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="col-85">
+                    <input type="text" id="email" name="email" placeholder="Email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-15">
+                    <label for="nr">Phone Number</label>
+                </div>
+                <div class="col-85">
+                    <input type="text" id="nr" name="nr" placeholder="Phone nr">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-15">
+                    <label for="data_sosire">Data Sosire</label>
+                </div>
+                <div class="col-85">
+                    <input type="date" id="data_sosire" name="data_sosire">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-15">
+                    <label for="data_plecare">Data Plecare</label>
+                </div>
+                <div class="col-85">
+                    <input type="date" id="data_plecare" name="data_plecare">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-15">
+                  <label for="camera">Tip Camera</label>
+                </div>
+                <div class="col-85">
+                  <select id="camera" name="camera">
+                    <option value="dubla">Camera Dubla</option>
+                    <option value="tripla">Camera Tripla</option>
+                    <option value="apartament">Apartament cu 2 camere</option>
+                    <option value="delux">Apartament Delux</option>
+                  </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-15">
+                    <label for="guests">Number of Guests</label>
+                </div>
+                <div class="col-85">
+                    <input type="number" id="guests" name="guests">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-15">
+                  <label for="requests">Special Requests</label>
+                </div>
+                <div class="col-85">
+                  <textarea id="requests" name="requests" placeholder="I wish.." style="height:200px"></textarea>
+                </div>
+              </div>
+            <br>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div id="adresa">
+            <div>ADRESA</div>
+            <div>str Ionescu, nr 12</div>
+            <div>Sinaia, judetul Prahova</div>
+        </div>
+        <div id="telefon">
+            <div>TELEFON</div>
+            <div>+407300226122</div>
+        </div>
+        <div id="email">
+            <div>EMAIL</div>
+            <div>hotel_white_lily@gmail.com</div>
+            <div>white_lily_rezervari@gmail.com</div>
+        </div>
+        <div id="facebook">
+            <div>FACEBOOK</div>
+            <div>@WhiteLily</div>
+        </div>
+    </footer> 
+</body>
+</html>
