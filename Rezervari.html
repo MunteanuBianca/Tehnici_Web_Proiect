@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rezervari</title>
     <link href="Rezervari.css" rel="stylesheet">
-    <!-- <script src="Rezervari.js"></script> -->
+    <script src="Rezervari.js"></script>
 </head>
 <body>
     <header>
@@ -21,7 +21,7 @@
             <li>ISTORIC</li>
         </ul>
     </nav>
-    <main>
+    <main id="main">
         <h2 id="prezentare">Alege camera ta de vis pentru un sejur ca in basme!</h2>
         <div id="continut">
             <div class="container">
@@ -51,7 +51,7 @@
                   <label for="fname">First Name</label>
                 </div>
                 <div class="col-85">
-                  <input type="text" id="fname" name="firstname" placeholder="First Name">
+                  <input type="text" id="fname" name="firstname" placeholder="First Name" required>
                 </div>
             </div>
             <div class="row">
@@ -59,7 +59,7 @@
                     <label for="lname">Last Name</label>
                 </div>
                 <div class="col-85">
-                    <input type="text" id="lname" name="lastname" placeholder="Last Name">
+                    <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
                 </div>
             </div>
             <div class="row">
@@ -67,7 +67,7 @@
                     <label for="email">Email Address</label>
                 </div>
                 <div class="col-85">
-                    <input type="text" id="email" name="email" placeholder="Email">
+                    <input type="text" id="email" name="email" placeholder="Email" >
                 </div>
             </div>
             <div class="row">
@@ -75,7 +75,7 @@
                     <label for="nr">Phone Number</label>
                 </div>
                 <div class="col-85">
-                    <input type="text" id="nr" name="nr" placeholder="Phone nr">
+                    <input type="text" id="nr" name="nr" placeholder="Phone nr" >
                 </div>
             </div>
             <div class="row">
@@ -83,7 +83,7 @@
                     <label for="data_sosire">Data Sosire</label>
                 </div>
                 <div class="col-85">
-                    <input type="date" id="data_sosire" name="data_sosire">
+                    <input type="date" id="data_sosire" name="data_sosire" >
                 </div>
             </div>
             <div class="row">
@@ -91,7 +91,7 @@
                     <label for="data_plecare">Data Plecare</label>
                 </div>
                 <div class="col-85">
-                    <input type="date" id="data_plecare" name="data_plecare">
+                    <input type="date" id="data_plecare" name="data_plecare" >
                 </div>
             </div>
             <div class="row">
@@ -99,7 +99,7 @@
                   <label for="camera">Tip Camera</label>
                 </div>
                 <div class="col-85">
-                  <select id="camera" name="camera">
+                  <select id="camera" name="camera" >
                     <option value="dubla">Camera Dubla</option>
                     <option value="tripla">Camera Tripla</option>
                     <option value="apartament">Apartament cu 2 camere</option>
@@ -112,7 +112,7 @@
                     <label for="guests">Number of Guests</label>
                 </div>
                 <div class="col-85">
-                    <input type="number" id="guests" name="guests">
+                    <input type="number" id="guests" name="guests" >
                 </div>
             </div>
             <div class="row">
