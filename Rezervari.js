@@ -8,6 +8,7 @@ function handleSubmit(event) {
 
 
     const div = document.createElement('div');
+    div.setAttribute("id", "alert");
     div.innerHTML = fname + " " + lname;
     div.style.position = "fixed";
     div.style.left="50%";
@@ -23,6 +24,7 @@ function handleSubmit(event) {
     div.style.borderRadius="25px";
 
     const overlay = document.createElement('div');
+    overlay.setAttribute("id", "overlay");
     overlay.style.position="fixed";
     overlay.style.left="0";
     overlay.style.top="0";
@@ -39,9 +41,17 @@ function handleSubmit(event) {
     event.preventDefault();   
 }
 
+function deleteAlert() {
+    const div = document.getElementById("alert");
+    const overlay = document.getElementById("overlay");
+    div.remove();
+    overlay.remove();
+}
+
 function init () {
     const form = document.querySelector('form');
     document.addEventListener('submit', handleSubmit);
+    document.addEventListener('click', deleteAlert)
 }
 
 window.onload=init;
