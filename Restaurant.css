@@ -164,6 +164,7 @@ main {
     cursor: pointer;
     margin: 0 5vw;
     font-size: 1.5em;
+    padding: 1%;
 }
 
 .meniuri_principale:hover > p {
@@ -171,7 +172,9 @@ main {
 }
 
 .meniuri_principale > p:hover {
-    font-size: 1.7em;
+    background-color: rgb(210, 166, 252);
+    border-radius: 5px;
+    color: white; 
 }
 
 .desfasurate {
