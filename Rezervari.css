@@ -210,16 +210,9 @@ input[type=submit]:hover {
     border-radius: 25px;    
 }
 
-/* #col-left {
-    float: left;
-}
-
-#col-right {
-    float: right;
-} */
-
 #col-left > div, #col-right > div {
-    padding: 2%;
+    padding: 2px;
+    margin: 2px;
 }
 
 #overlay {
