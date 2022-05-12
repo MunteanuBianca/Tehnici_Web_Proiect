@@ -161,6 +161,42 @@ function deleteReservation() {
 function init () {
     const form = document.querySelector('form');
     document.addEventListener('submit', handleSubmit);
+    setCameraValue();
+}
+
+
+function setCameraValue() {
+    const form = document.querySelector('form');
+    const camera = document.querySelector('[name="camera"]'); 
+    const dubla = document.getElementById("dubla");
+    const tripla= document.getElementById("tripla");
+    const apartament = document.getElementById("apartament");
+    const delux = document.getElementById("delux");
+
+    dubla.addEventListener('click', () => {
+        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        camera.value="dubla";
+        console.log(camera.value);
+    });
+
+    tripla.addEventListener('click', () => {
+        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        camera.value="tripla";
+        console.log(camera.value);
+    });
+
+    apartament.addEventListener('click', () => {
+        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        camera.value="apartament";
+        console.log(camera.value);
+    });
+
+    delux.addEventListener('click', () => {
+        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        camera.value="delux";
+        console.log(camera.value);
+    });
+    
 }
 
 window.onload=init;
