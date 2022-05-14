@@ -32,19 +32,7 @@ function startTime() {
   setTimeout(function() {startTime()}, 1000);
 }
 
-// function popUp() {
-//   let time = setTimeout(() => {
-//     const pop = document.createElement('div');
-//     pop.setAttribute('id', 'popUp');
-//     pop.textContent = `Te asteptam la Hotel White Lily!
-//                        Fa o rezervare acum!`;
-//     document.body.appendChild(pop);
-//   }, 4000);
-//   console.log("smth");
-// }
-
 window.onload = () => {
   toggleInterval();
-  //popUp();
   startTime();
 }
