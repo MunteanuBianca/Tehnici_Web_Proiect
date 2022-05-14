@@ -112,7 +112,7 @@
                     <label for="guests">Number of Guests</label>
                 </div>
                 <div class="col-85">
-                    <input type="number" id="guests" name="guests" >
+                    <input type="number" min=0 id="guests" name="guests" >
                 </div>
             </div>
             <div class="row">
@@ -128,6 +128,35 @@
                 <input type="submit" value="Submit">
             </div>
         </form>
+        <div id="reservation">
+            <h2>Ai facut o rezervare cu urmatoarele date: </h2>
+            <section id="lista">
+                <div id="col-left">
+                    <div>Nume: </div>
+                    <div>Prenume: </div>
+                    <div>Email: </div>
+                    <div>Nr de telefon: </div>
+                    <div>Sosire: </div>
+                    <div>Plecare: </div>
+                    <div>Camera: </div>
+                    <div>Nr de vizitatori: </div>
+                    <div>Cerinte speciale: </div>
+                </div>
+                <div id="col-right">
+                    <div id="l21"></div>
+                    <div id="l22"></div>
+                    <div id="l23"></div>
+                    <div id="l24"></div>
+                    <div id="l25"></div>
+                    <div id="l26"></div>
+                    <div id="l27"></div>
+                    <div id="l28"></div>
+                    <div id="l29"></div>
+                </div>
+            </section>
+            <button class="ok_button" id="ok_reservation"></button>
+            <button class="sterge_button" id="sterge_reservation"></button>
+        </div>
     </main>
     <footer>
         <div id="adresa">

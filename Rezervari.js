@@ -9,35 +9,39 @@ function handleSubmit(event) {
     const guests = document.querySelector('[name="guests"]').value;
     const requests = document.querySelector('[name="requests"]').value;
 
-    const Details = {fname, lname, email, nr, sosire, plecare, camera, guests, requests};
-    localStorage.setItem('userDetails', JSON.stringify(Details));
+    const regex = /^[A-Za-z-]+$/;
+    console.log(regex.test(fname), regex.test(lname));
+    if (regex.test(fname) && regex.test(lname)) {
+        const Details = {fname, lname, email, nr, sosire, plecare, camera, guests, requests};
+        localStorage.setItem('userDetails', JSON.stringify(Details));
 
-    const div = document.createElement('div');
-    div.setAttribute("id", "alert");
-    const message = document.createElement('h2');
-    message.innerHTML = "Felicitari, " + fname + " " + lname + ", ai facut o rezervare la Hotel White Lily";
-    div.appendChild(message);
-    const main = document.getElementById('main');
-    main.prepend(div);
+        const div = document.createElement('div');
+        div.setAttribute("id", "alert");
+        const message = document.createElement('h2');
+        message.innerHTML = "Felicitari, " + fname + " " + lname + ", ai facut o rezervare la Hotel White Lily";
+        div.appendChild(message);
+        const main = document.getElementById('main');
+        main.prepend(div);
+        
+        const check = document.createElement('img');
+        check.src="Rezervari/check_mark.jpg";
+        check.style.width="30%";
+        check.style.transition=" width 2s";
+        div.prepend(check);
+
+        const ok = document.createElement('button');
+        ok.innerHTML="vezi datele rezervarii";
+        ok.addEventListener('click', deleteAlert);
+        ok.addEventListener('click', showReservation);
+        ok.classList.add('ok_button');
+        div.appendChild(ok);
+
+        const overlay = document.createElement('div');
+        overlay.setAttribute("id", "overlay");
+        document.body.prepend(overlay);
+    }  
     
-    const check = document.createElement('img');
-    check.src="Rezervari/check_mark.jpg";
-    check.style.width="30%";
-    check.style.transition=" width 2s";
-    div.prepend(check);
-
-    const ok = document.createElement('button');
-    ok.innerHTML="vezi datele rezervarii";
-    ok.addEventListener('click', deleteAlert);
-    ok.addEventListener('click', showReservation);
-    ok.classList.add('ok_button');
-    div.appendChild(ok);
-
-    
-
-    const overlay = document.createElement('div');
-    overlay.setAttribute("id", "overlay");
-    document.body.prepend(overlay);
+    else alert("Numele sau prenumele au fost introduse gresit");
 
     event.preventDefault();   
 }
@@ -45,44 +49,15 @@ function handleSubmit(event) {
 function showReservation() {
     userDetails = JSON.parse(localStorage.getItem('userDetails'));
 
-    const lista = document.createElement('section');
-    lista.style.display="flex";
-    lista.style.gap="10%";
-
-    const col1 = document.createElement('div');
-    col1.setAttribute('id', 'col-left');
-    const col2 = document.createElement('div');
-    col2.setAttribute('id', 'col-right');
-
-    const l11 = document.createElement('div');
-    const l12 = document.createElement('div');
-    const l13 = document.createElement('div');
-    const l14 = document.createElement('div');
-    const l15 = document.createElement('div');
-    const l16 = document.createElement('div');
-    const l17 = document.createElement('div');
-    const l18 = document.createElement('div');
-    const l19 = document.createElement('div');
-
-    const l21 = document.createElement('div');
-    const l22 = document.createElement('div');
-    const l23 = document.createElement('div');
-    const l24 = document.createElement('div');
-    const l25 = document.createElement('div');
-    const l26 = document.createElement('div');
-    const l27 = document.createElement('div');
-    const l28 = document.createElement('div');
-    const l29 = document.createElement('div');
-
-    l11.innerHTML="Nume: ";
-    l12.innerHTML="Prenume: ";
-    l13.innerHTML="Email: ";
-    l14.innerHTML="Nr de telefon: ";
-    l15.innerHTML="Sosire: ";
-    l16.innerHTML="Plecare: ";
-    l17.innerHTML="Camera: ";
-    l18.innerHTML="Nr de vizitatori: ";
-    l19.innerHTML="Cerinte speciale: ";
+    const l21 = document.getElementById('l21');
+    const l22 = document.getElementById('l22');
+    const l23 = document.getElementById('l23');
+    const l24 = document.getElementById('l24');
+    const l25 = document.getElementById('l25');
+    const l26 = document.getElementById('l26');
+    const l27 = document.getElementById('l27');
+    const l28 = document.getElementById('l28');
+    const l29 = document.getElementById('l29');
 
     l21.innerHTML=`${userDetails.lname}`;
     l22.innerHTML=`${userDetails.fname}`;
@@ -94,49 +69,20 @@ function showReservation() {
     l28.innerHTML=`${userDetails.guests}`;
     l29.innerHTML=`${userDetails.requests}`;
 
-    col1.appendChild(l11);
-    col1.appendChild(l12);
-    col1.appendChild(l13);
-    col1.appendChild(l14);
-    col1.appendChild(l15);
-    col1.appendChild(l16);
-    col1.appendChild(l17);
-    col1.appendChild(l18);
-    col1.appendChild(l19);
-
-    col2.appendChild(l21);
-    col2.appendChild(l22);
-    col2.appendChild(l23);
-    col2.appendChild(l24);
-    col2.appendChild(l25);
-    col2.appendChild(l26);
-    col2.appendChild(l27);
-    col2.appendChild(l28);
-    col2.appendChild(l29);
-
-    lista.appendChild(col1);
-    lista.appendChild(col2);
-
-    const div = document.createElement('div');
-    div.setAttribute("id", "reservation");
-    const intro = document.createElement('h2');
-    intro.innerHTML = "Ai facut o rezervare cu urmatoarele date: ";
-    div.appendChild(intro);
-    div.appendChild(lista);
-    const main = document.getElementById('main');
-    main.prepend(div);
+    const div=document.getElementById('reservation');
+    div.style.display="block";
 
     const overlay = document.createElement('div');
     overlay.setAttribute("id", "overlay");
     document.body.prepend(overlay);
 
-    const ok = document.createElement('button');
+    ok=document.getElementById("ok_reservation");
     ok.innerHTML="inapoi la site";
     ok.addEventListener('click', deleteReservation);
     ok.classList.add('ok_button');
     div.appendChild(ok);
 
-    const sterge = document.createElement('button');
+    sterge=document.getElementById("sterge_reservation");
     sterge.innerHTML="sterge rezervarea";
     sterge.addEventListener('click', () => localStorage.removeItem('userDetails'));
     sterge.addEventListener('click', deleteReservation);
@@ -154,16 +100,10 @@ function deleteAlert() {
 function deleteReservation() {
     const div = document.getElementById("reservation");
     const overlay = document.getElementById("overlay");
-    div.remove();
+    // div.remove();
+    div.style.display="none";
     overlay.remove();
 }
-
-function init () {
-    const form = document.querySelector('form');
-    document.addEventListener('submit', handleSubmit);
-    setCameraValue();
-}
-
 
 function setCameraValue() {
     const form = document.querySelector('form');
@@ -197,6 +137,12 @@ function setCameraValue() {
         console.log(camera.value);
     });
     
+}
+
+function init () {
+    const form = document.querySelector('form');
+    document.addEventListener('submit', handleSubmit);
+    setCameraValue();
 }
 
 window.onload=init;
