@@ -88,6 +88,14 @@ function showReservation() {
     sterge.addEventListener('click', deleteReservation);
     sterge.classList.add('sterge_button');
     div.appendChild(sterge);
+
+    document.addEventListener('keydown', EscapeReservation);
+}
+
+function EscapeReservation(event) {
+    if (event.key != 'Escape')
+        return;
+    deleteReservation();
 }
 
 function deleteAlert() {
