@@ -120,11 +120,14 @@ main {
     background-color: rgba(22, 2, 54, 0.5);
 }
 
-main > #prezentare {
+#prezentare {
     text-align: center;
+    width: 60vw;
+    margin-left: 20vw;
 }
 
-main > .continut {
+
+.continut {
     margin: 10vh 0px 10vh 8vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -147,7 +150,7 @@ main > .continut {
     opacity: 1;
 }
 
-main > .continut > .descriere {
+.continut > .descriere {
  text-align: center;
 }
 

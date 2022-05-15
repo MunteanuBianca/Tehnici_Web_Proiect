@@ -113,7 +113,7 @@ main {
     left:0;
     overflow: hidden;
     animation: 20s autoplay_right_left infinite ease-in-out;
-    width: 40vw;
+    width: 100%;
 }
 
 @keyframes autoplay_bottom_top {
