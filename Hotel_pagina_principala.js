@@ -39,7 +39,7 @@ function popUp() {
 
   const pop = document.getElementById('pop');
   pop.style.display="block";
-  pop.addEventListener('click', () => {window.open("Rezervari.html")});
+  pop.addEventListener('click', () => {window.open("Rezervari.html"); deletePop();});
 
   const x = document.querySelector('button');
   x.addEventListener('click', deletePop);
@@ -56,5 +56,5 @@ function deletePop(event) {
 window.onload = () => {
   toggleInterval();
   startTime();
-  setTimeout(popUp, 3000);
+  setTimeout(popUp, 10000);
 }

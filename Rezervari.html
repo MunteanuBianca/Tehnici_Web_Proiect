@@ -27,22 +27,22 @@
             <div class="container" id="dubla">
                 <img src="Rezervari/1.jpg" class="img"/>
                 <h2>Camera Dubla</h2>
-                <p>alt text</p>  
+                <p>250 RON</p>  
             </div>
             <div class="container" id="tripla">
                 <img src="Rezervari/5.jpg" class="img"/>
                 <h2>Camera Tripla</h2>
-                <p>alt text</p>  
+                <p>300 RON</p>  
             </div>
             <div class="container" id="apartament">
                 <img src="Rezervari/3.jpg" class="img"/>
                 <h2>Apartament</h2>
-                <p>alt text</p>  
+                <p>400 RON</p>  
             </div>
             <div class="container" id="delux">
                 <img src="Rezervari/4.jpg" class="img"/>
                 <h2>Apartamnet Delux</h2>
-                <p>alt text</p>  
+                <p>550 RON</p>  
             </div>
         </div>
         <form>
@@ -67,7 +67,7 @@
                     <label for="email">Email Address</label>
                 </div>
                 <div class="col-85">
-                    <input type="text" id="email" name="email" placeholder="Email" >
+                    <input type="text" id="email" name="email" placeholder="Email" required>
                 </div>
             </div>
             <div class="row">
@@ -75,7 +75,7 @@
                     <label for="nr">Phone Number</label>
                 </div>
                 <div class="col-85">
-                    <input type="text" id="nr" name="nr" placeholder="Phone nr" >
+                    <input type="text" id="nr" name="nr" placeholder="Phone nr" required>
                 </div>
             </div>
             <div class="row">
@@ -83,7 +83,7 @@
                     <label for="data_sosire">Data Sosire</label>
                 </div>
                 <div class="col-85">
-                    <input type="date" id="data_sosire" name="data_sosire" >
+                    <input type="date" id="data_sosire" name="data_sosire" required>
                 </div>
             </div>
             <div class="row">
@@ -91,7 +91,7 @@
                     <label for="data_plecare">Data Plecare</label>
                 </div>
                 <div class="col-85">
-                    <input type="date" id="data_plecare" name="data_plecare" >
+                    <input type="date" id="data_plecare" name="data_plecare" required>
                 </div>
             </div>
             <div class="row">
@@ -99,7 +99,7 @@
                   <label for="camera">Tip Camera</label>
                 </div>
                 <div class="col-85">
-                  <select id="camera" name="camera" >
+                  <select id="camera" name="camera" required>
                     <option value="dubla">Camera Dubla</option>
                     <option value="tripla">Camera Tripla</option>
                     <option value="apartament">Apartament cu 2 camere</option>
@@ -112,7 +112,7 @@
                     <label for="guests">Number of Guests</label>
                 </div>
                 <div class="col-85">
-                    <input type="number" min=0 id="guests" name="guests" >
+                    <input type="number" min=0 id="guests" name="guests" required>
                 </div>
             </div>
             <div class="row">
