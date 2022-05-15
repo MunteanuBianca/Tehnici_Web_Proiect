@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-image: url("Pagina_principala/Hotel_Rooms/hotel_room.jpg");
+    background-image: url("History/history2.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
@@ -70,8 +70,36 @@ main {
 
 #visits {
     font-size: 50px;
-    margin: 0 40%;
+    margin: 2% 40%;
     width:20%;
     border: 2px solid rgb(22, 2, 54);
     border-radius: 5px;
+}
+
+#history {
+    margin: 5% 25%;
+    width:50%;
+    border-top: 2px dashed rgb(22, 2, 54);
+    transition: all 1s ease-in;
+    text-align: justify;
+    transition: all 1s ease-in;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(22, 2, 54);
+    color: white;
+    margin-bottom: 0px;
+    padding: 8px 0px 8px 0px;
+    font-size: 20px;
+}
+
+footer > div :first-child {
+    color:rgb(210, 166, 252);
+}
+
+footer > div {
+    flex:1;
 }

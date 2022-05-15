@@ -77,12 +77,16 @@ main {
     margin: 0 9vw;
     box-sizing: border-box;
     padding: 0;
+    gap: 25px;
 }
 
 #descriere {
     flex:1;
-    text-align: center;
+    text-align: justify;
     align-self: center;
+    font-size: 1.5em;
+    border-top: 2px dashed rgb(22, 2, 54);
+    border-bottom: 2px dashed rgb(22, 2, 54);
 }
 
 #slideset {

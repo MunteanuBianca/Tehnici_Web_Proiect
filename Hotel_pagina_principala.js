@@ -32,7 +32,29 @@ function startTime() {
   setTimeout(function() {startTime()}, 1000);
 }
 
+function popUp() {
+  const overlay = document.createElement('div');
+  overlay.setAttribute("id", "overlay");
+  document.body.prepend(overlay);
+
+  const pop = document.getElementById('pop');
+  pop.style.display="block";
+  pop.addEventListener('click', () => {window.open("Rezervari.html")});
+
+  const x = document.querySelector('button');
+  x.addEventListener('click', deletePop);
+}
+
+function deletePop(event) {
+  const pop = document.getElementById('pop');
+  pop.remove();
+  const overlay = document.getElementById("overlay");
+  overlay.remove();
+  event.stopPropagation();
+}
+
 window.onload = () => {
   toggleInterval();
   startTime();
+  setTimeout(popUp, 3000);
 }
