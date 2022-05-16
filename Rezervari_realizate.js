@@ -1,4 +1,4 @@
-function showAlert(event) {
+function showAlert() {
 
         const alert = document.getElementById('alert');
 
@@ -16,9 +16,7 @@ function showAlert(event) {
 
         const overlay = document.createElement('div');
         overlay.setAttribute("id", "overlay");
-        document.body.prepend(overlay);
-
-    // event.preventDefault();   
+        document.body.prepend(overlay);  
 }
 
 function showReservation() {

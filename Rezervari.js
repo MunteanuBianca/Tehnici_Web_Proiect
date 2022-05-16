@@ -1,21 +1,24 @@
 function handleSubmit(event) {
     const fname = document.querySelector('[name="firstname"]').value;
     const lname = document.querySelector('[name="lastname"]').value;
-    // const email = document.querySelector('[name="email"]').value;
-    // const nr = document.querySelector('[name="nr"]').value;
+    const email = document.querySelector('[name="email"]').value;
+    const nr = document.querySelector('[name="nr"]').value;
     // const sosire = document.querySelector('[name="data_sosire"]').value;
     // const plecare = document.querySelector('[name="data_plecare"]').value;
     // const camera = document.querySelector('[name="camera"]').value;
     // const guests = document.querySelector('[name="guests"]').value;
     // const requests = document.querySelector('[name="requests"]').value;
 
-    const regex = /^[A-Za-z-]+$/;
-    console.log(regex.test(fname), regex.test(lname));
+    const regexNume = /^[A-Za-z- ]+$/;
+    const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const regexNr =  /^\+?[0-9]{11}$/;
+    console.log(regexNume.test(fname), regexNume.test(lname), regexEmail.test(email), regexNr.test(nr));
+    console.log(fname,lname,email,nr);
     
-    if (!regex.test(fname) || !regex.test(lname)) {
+    if (!regexNume.test(fname) || !regexNume.test(lname) || !regexEmail.test(email) || !regexNr.test(nr)) {
         alert("Numele sau prenumele au fost introduse gresit");
         event.preventDefault(); 
-    }  
+    }
 }
 
 function setCameraValue() {

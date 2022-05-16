@@ -19,9 +19,22 @@ app.get('/istoric', function(req, res){
   res.sendFile('Istoric.html',{root:path.join(__dirname)});
 });
 
+const userDetails =[];
 app.post('/rezervari', function (req, res) {
-  const {firstname, lastname, email, nr, sosire, plecare, camera, guests, requests} = req.body;
-  res.render('Rezervari_realizate.ejs' ,{firstname, lastname, email, nr, sosire, plecare, camera, guests, requests});
+  let ok=1;
+  const details = {firstname, lastname, email, nr, sosire, plecare, camera, guests, requests} = req.body;
+  for( let i=0; i< userDetails.length; i++) {
+    if(sosire == userDetails[i]['sosire'] && plecare == userDetails[i]['plecare'] && camera == userDetails[i]['camera']) {
+      ok=0;
+    }
+  }
+  console.log(ok);
+  userDetails.push(details);
+  if(ok==1)
+    res.render('Rezervari_realizate.ejs' ,{firstname, lastname, email, nr, sosire, plecare, camera, guests, requests});
+  else {
+      res.status(404).sendFile("Rezervare_esuata.html", {root: path.join(__dirname)});
+  }
 });
 
 app.use('/public', express.static(path.join(__dirname)));
