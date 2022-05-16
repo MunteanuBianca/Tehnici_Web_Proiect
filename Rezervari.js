@@ -16,7 +16,7 @@ function handleSubmit(event) {
     console.log(fname,lname,email,nr);
     
     if (!regexNume.test(fname) || !regexNume.test(lname) || !regexEmail.test(email) || !regexNr.test(nr)) {
-        alert("Numele sau prenumele au fost introduse gresit");
+        alert("Datele au fost introduse gresit");
         event.preventDefault(); 
     }
 }
