@@ -19,10 +19,10 @@ app.get('/istoric', function(req, res){
   res.sendFile('Istoric.html',{root:path.join(__dirname)});
 });
 
-// app.post('/rezervari', function(req, res){
-//   const {firstname, lastname, email, nr, sosire, plecare, camera, guests, requests} = req.body;
-//   res.sendFile('Rezervari.html',{root:path.join(__dirname)});; 
-// })
+app.post('/rezervari', function (req, res) {
+  const {firstname, lastname, email, nr, sosire, plecare, camera, guests, requests} = req.body;
+  res.render('Rezervari_realizate.ejs' ,{firstname, lastname, email, nr, sosire, plecare, camera, guests, requests});
+});
 
 app.use('/public', express.static(path.join(__dirname)));
 
