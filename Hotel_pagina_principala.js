@@ -43,6 +43,14 @@ function popUp() {
 
   const x = document.querySelector('button');
   x.addEventListener('click', deletePop);
+
+  document.addEventListener('keydown', EscapePopUp);
+}
+
+function EscapePopUp(event) {
+  if (event.key != 'Escape')
+      return;
+  deletePop();
 }
 
 function deletePop(event) {
