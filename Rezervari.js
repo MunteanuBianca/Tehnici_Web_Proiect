@@ -24,7 +24,7 @@ function handleSubmit(event) {
         main.prepend(div);
         
         const check = document.createElement('img');
-        check.src="Rezervari/check_mark.jpg";
+        check.src="public/Rezervari/check_mark.jpg";
         check.style.width="30%";
         check.style.transition=" width 2s";
         div.prepend(check);
@@ -108,7 +108,6 @@ function deleteAlert() {
 function deleteReservation() {
     const div = document.getElementById("reservation");
     const overlay = document.getElementById("overlay");
-    // div.remove();
     div.style.display="none";
     overlay.remove();
 }

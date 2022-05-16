@@ -39,7 +39,7 @@ function popUp() {
 
   const pop = document.getElementById('pop');
   pop.style.display="block";
-  pop.addEventListener('click', () => {window.open("Rezervari.html"); deletePop();});
+  pop.addEventListener('click', () => {window.open("rezervari"); deletePop();});
 
   const x = document.querySelector('button');
   x.addEventListener('click', deletePop);

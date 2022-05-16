@@ -1,16 +1,11 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const res = require('express/lib/response');
 const app = express();
-// app.use(express.static(__dirname ));
-// http.createServer(function (req, res) {
-//   //Open a file on the server and return its content:
-//   fs.readFile('Hotel_pagina_principala.html', function(err, data) {
-//     res.writeHead(200, {'Content-Type': 'text/html'});
-//     res.write(data);
-//     return res.end();
-//   });
-// }).listen(8080);
 const path = require('path');
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/principala', function(req, res){
   res.sendFile('Hotel_pagina_principala.html',{root:path.join(__dirname)});
 });
@@ -23,5 +18,17 @@ app.get('/rezervari', function(req, res){
 app.get('/istoric', function(req, res){
   res.sendFile('Istoric.html',{root:path.join(__dirname)});
 });
+
+// app.post('/rezervari', function(req, res){
+//   const {firstname, lastname, email, nr, sosire, plecare, camera, guests, requests} = req.body;
+//   res.sendFile('Rezervari.html',{root:path.join(__dirname)});; 
+// })
+
 app.use('/public', express.static(path.join(__dirname)));
-app.listen(3003);
+
+app.use((req, res, next) => {
+  res.status(404).sendFile("404.html", {root: path.join(__dirname)});
+});
+
+
+app.listen(process.env.PORT || 3003);
