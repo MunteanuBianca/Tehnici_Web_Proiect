@@ -39,7 +39,7 @@ function popUp() {
 
   const pop = document.getElementById('pop');
   pop.style.display="block";
-  pop.addEventListener('click', () => {window.open("rezervari"); deletePop();});
+  pop.addEventListener('click', (event) => {window.open("rezervari"); deletePop(event);});
 
   const x = document.querySelector('button');
   x.addEventListener('click', deletePop);
@@ -50,7 +50,9 @@ function popUp() {
 function EscapePopUp(event) {
   if (event.key != 'Escape')
       return;
-  deletePop();
+  const pop = document.getElementById('pop');
+  if(pop != null)
+    deletePop(event);
 }
 
 function deletePop(event) {
@@ -58,11 +60,15 @@ function deletePop(event) {
   pop.remove();
   const overlay = document.getElementById("overlay");
   overlay.remove();
-  event.stopPropagation();
+  if(event.currentTarget.tagName=='BUTTON')
+    event.stopPropagation();
+  alert(`Ai apasat ${event.currentTarget.tagName} din ${event.target.tagName}`);
+  console.log(event.target.tagName);
+  console.log(event.currentTarget.tagName);
 }
 
 window.onload = () => {
   toggleInterval();
   startTime();
-  setTimeout(popUp, 10000);
+  setTimeout(popUp, 7000);
 }

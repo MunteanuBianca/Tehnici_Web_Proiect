@@ -12,7 +12,6 @@ function init() {
     const hist = document.querySelector('.descriere h2');
     hist.style.backgroundColor = style.backgroundColor;
     hist.style.backgroundImage = `linear-gradient(to left, rgb(255, 255, 255), ${style.backgroundColor}, rgb(255,255,255))`;
-
 }
   
 window.onload = init;
