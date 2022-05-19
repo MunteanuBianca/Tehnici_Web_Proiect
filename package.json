@@ -18,6 +18,8 @@
   "homepage": "https://github.com/MunteanuBianca/Tehnici_Web_Proiect#readme",
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "file-system": "^2.2.2",
+    "formidable": "^2.0.1"
   }
 }

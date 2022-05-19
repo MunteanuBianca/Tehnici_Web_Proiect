@@ -1,5 +1,4 @@
 function showAlert() {
-
         const alert = document.getElementById('alert');
 
         const check = document.createElement('img');
@@ -34,12 +33,11 @@ function showReservation() {
     ok.classList.add('ok_button');
     div.appendChild(ok);
 
-    sterge=document.getElementById("sterge_reservation");
-    sterge.innerHTML="sterge rezervarea";
-    sterge.addEventListener('click', () => localStorage.removeItem('userDetails'));
-    sterge.addEventListener('click', deleteReservation);
-    sterge.classList.add('sterge_button');
-    div.appendChild(sterge);
+    // sterge=document.getElementById("sterge_reservation");
+    // sterge.innerHTML="sterge rezervarea";
+    // sterge.addEventListener('click', deleteReservation);
+    // sterge.classList.add('sterge_button');
+    // div.appendChild(sterge);
 
 }
 

@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const res = require('express/lib/response');
+const fs = require('fs');
+const formidable=require('formidable');
 const app = express();
 const path = require('path');
 app.set('view engine', 'ejs');
@@ -18,9 +20,20 @@ app.get('/rezervari', function(req, res){
 app.get('/istoric', function(req, res){
   res.sendFile('Istoric.html',{root:path.join(__dirname)});
 });
+app.get('/fetch', function(req, res){
+  res.sendFile('rezervari.json',{root:path.join(__dirname)});
+});
 
-const userDetails =[];
-app.post('/rezervari', function (req, res) {
+app.post('/rezervari',function(req,res){
+  var userDetails;
+  if (fs.existsSync("rezervari.json"))
+  {
+  var date= fs.readFileSync("rezervari.json");
+  userDetails=JSON.parse(date);
+  }
+  else {
+    userDetails=[];
+  }
   let ok=1;
   const details = {firstname, lastname, email, nr, data_sosire, data_plecare, camera, guests, requests} = req.body;
   for( let i=0; i< userDetails.length; i++) {
@@ -28,14 +41,18 @@ app.post('/rezervari', function (req, res) {
       ok=0;
     }
   }
-  console.log(ok);
-  userDetails.push(details);
-  if(ok==1)
+  if(ok==1) {
+    userDetails.push(details);
     res.render('Rezervari_realizate.ejs' ,{firstname, lastname, email, nr, data_sosire, data_plecare, camera, guests, requests});
+    fs.writeFileSync("rezervari.json",JSON.stringify(userDetails));
+    // userDetails.pop();
+    // fs.writeFileSync("rezervari.json",JSON.stringify(userDetails));
+  }
   else {
-      res.status(404).sendFile("Rezervare_esuata.html", {root: path.join(__dirname)});
+    res.status(404).sendFile("Rezervare_esuata.html", {root: path.join(__dirname)});
   }
 });
+
 
 app.use('/public', express.static(path.join(__dirname)));
 

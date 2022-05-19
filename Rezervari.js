@@ -3,8 +3,8 @@ function handleSubmit(event) {
     const lname = document.querySelector('[name="lastname"]').value;
     const email = document.querySelector('[name="email"]').value;
     const nr = document.querySelector('[name="nr"]').value;
-    // const sosire = document.querySelector('[name="data_sosire"]').value;
-    // const plecare = document.querySelector('[name="data_plecare"]').value;
+    const sosire = document.querySelector('[name="data_sosire"]').value;
+    const plecare = document.querySelector('[name="data_plecare"]').value;
     // const camera = document.querySelector('[name="camera"]').value;
     // const guests = document.querySelector('[name="guests"]').value;
     // const requests = document.querySelector('[name="requests"]').value;
@@ -15,10 +15,11 @@ function handleSubmit(event) {
     console.log(regexNume.test(fname), regexNume.test(lname), regexEmail.test(email), regexNr.test(nr));
     console.log(fname,lname,email,nr);
     
-    if (!regexNume.test(fname) || !regexNume.test(lname) || !regexEmail.test(email) || !regexNr.test(nr)) {
+    if (!regexNume.test(fname) || !regexNume.test(lname) || !regexEmail.test(email) || !regexNr.test(nr) || sosire>=plecare) {
         alert("Datele au fost introduse gresit");
         event.preventDefault(); 
     }
+   
 }
 
 function setCameraValue() {
@@ -55,9 +56,26 @@ function setCameraValue() {
     
 }
 
+async function nrCamere() {
+    const res=await fetch('/fetch');
+    const data = await res.json();
+    let nr=0;
+    data.forEach(element => {
+        if(element.data_plecare < '2022-06-01')
+            nr++;
+    });
+    let pNrCamere = document.createElement('h2');
+    pNrCamere.textContent=`Numarul de camere rezervate in luna Mai: ${nr}`;
+    pNrCamere.style.textAlign="center";
+    document.querySelector('main').appendChild(pNrCamere);
+    console.log(data.length);
+
+}
+
 function init () {
     document.addEventListener('submit', handleSubmit);
     setCameraValue();
+    nrCamere();
 }
 
 window.onload=init;
